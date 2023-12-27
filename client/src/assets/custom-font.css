@@ -1,0 +1,7 @@
+/* custom-font.css */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins-Regular.ttf') format('truetype');
+    /* You can add more font properties here if needed */
+  }
+  

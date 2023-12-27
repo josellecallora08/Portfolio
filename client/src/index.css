@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: gray #f3f3f3; /* thumb and track color */
+    /* For Webkit browsers (Chrome, Safari) */
+   
+  
+    &::-webkit-scrollbar-thumb {
+        background-color: gray;
+        position: fixed;
+        right: 0;
+    }
+  
+    &::-webkit-scrollbar-track {
+        background-color: #f3f3f3;
+        position: fixed;
+        right: 0;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+        background-color: gray;
+        width: 8px;
+        position: fixed;
+        right: 0;
+      }
+  }
