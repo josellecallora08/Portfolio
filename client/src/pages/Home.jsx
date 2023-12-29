@@ -26,11 +26,11 @@ export const Home = () => {
       }, []);
    
     return (
-    <div className={`gap-1 h-full md:h-screen bg-secondary dark:bg-black  `}>
+    <div className={`gap-1 w-full h-full md:h-screen bg-secondary dark:bg-black`}>
         <Navbar/>
-        <div className={`w-full h-auto m-auto grid grid-cols-1 grid-flow-row md:w-98 md:h-inherit md:grid-cols-4 gap-4 md:gap-10`}>
-            <div className={`grid grid-rows-3 m-auto h-full w-full md:w-98 gap-4 row-start-2 md:col-span-1 md:row-start-1 lg:gap-2`}>
-                <div className="w-96 h-full md:row-span-2 mx-auto shadow-lg dark:bg-gray-600/30 rounded-md">
+        <div className={`w-full h-auto m-auto grid justify-center grid-flow-row md:grid-rows-none gap-4 md:w-98 md:h-inherit md:grid-cols-4  md:gap-10`}>
+            <div className={`grid h-full w-full m-auto md:w-98 gap-2 md:col-span-1 bg-red-200 md:gap-2`}>
+                <div className="w-96 md:w-auto h-full md:row-span-2 shadow-lg dark:bg-gray-600/30 rounded-md">
                 2
                </div>
                <div className="hidden md:block row-span-1 shadow-lg dark:bg-gray-600/30 rounded-md">
@@ -48,7 +48,7 @@ export const Home = () => {
                     </form>
                </div>
             </div>
-            <div id="main-container" className="col-span-2 grid gap-4 sm:gap-2 grid-cols-1 grid-flow-row justify-items-center overflow-y-scroll custom-scrollbar">
+            <div id="main-container" className="row-start-1 col-span-2 md:row-start-auto grid gap-4 sm:gap-2 grid-cols-1 grid-flow-row justify-items-center md:overflow-y-scroll custom-scrollbar">
                  {/* <div className="w-96 flex flex-col gap-2 justify-around  shadow-lg md:w-4/5 h-auto py-5 col-span-1 dark:bg-gray-600/30 dark:shadow-sm rounded-lg">
                    <button className="w-11/12 m-auto h-10 max-h-max px-5 bg-white rounded-xl outline-none text-left shadow-sm active:bg-gray-300">
                     Create a post...
@@ -74,7 +74,7 @@ export const Home = () => {
                         </div>
                    </div>
                 </div> */}
-                <div className="w-96 grid grid-cols-2 shadow-lg md:w-4/5 md:h-full h-auto py-5 lg:col-span-1 dark:bg-gray-600/30 dark:shadow-sm rounded-lg">
+                <div className="w-96 grid grid-cols-2 shadow-lg md:w-4/5 md:h-full h-auto py-5 md:col-span-1 dark:bg-gray-600/30 dark:shadow-sm rounded-lg">
                     <div className="grid justify-items-center">
                         <img src={myphoto} alt="" className="rounded-md object-cover w-4/5 h-full"/>
                     </div>
@@ -91,7 +91,37 @@ export const Home = () => {
                         <div className="md:col-span-1 grid justify-items-center m-auto">
                             <h1 className="dark:text-dark font-bold text-lg">Javascript Essentials</h1>
                         </div>
-                        <figure className="md:col-span-2 bg-white-300 w-full h-auto mb-auto grid justify-items-center">
+                        <figure className="md:col-span-2 bg-white-300 w-full h-4/5 mb-auto md:m-auto grid justify-items-center">
+                            <img src={js_cert} alt="Javascript Essentials" className="h-full w-full contain" />
+                        </figure>
+                    </div>
+                </div>
+                <div className="h-80 w-96 md:w-4/5 rounded-lg shadow-lg dark:shadow-sm  dark:bg-gray-600/30">
+                    <div className="h-full grid md:grid-cols-3 md:gap-4 m-auto w-5/6">
+                        <div className="md:col-span-1 grid justify-items-center m-auto">
+                            <h1 className="dark:text-dark font-bold text-lg">Javascript Essentials</h1>
+                        </div>
+                        <figure className="md:col-span-2 bg-white-300 w-full h-4/5 mb-auto md:m-auto grid justify-items-center">
+                            <img src={js_cert} alt="Javascript Essentials" className="h-full w-full contain" />
+                        </figure>
+                    </div>
+                </div>
+                <div className="h-80 w-96 md:w-4/5 rounded-lg shadow-lg dark:shadow-sm  dark:bg-gray-600/30">
+                    <div className="h-full grid md:grid-cols-3 md:gap-4 m-auto w-5/6">
+                        <div className="md:col-span-1 grid justify-items-center m-auto">
+                            <h1 className="dark:text-dark font-bold text-lg">Javascript Essentials</h1>
+                        </div>
+                        <figure className="md:col-span-2 bg-white-300 w-full h-4/5 mb-auto md:m-auto grid justify-items-center">
+                            <img src={js_cert} alt="Javascript Essentials" className="h-full w-full contain" />
+                        </figure>
+                    </div>
+                </div>
+                <div className="h-80 w-96 md:w-4/5 rounded-lg shadow-lg dark:shadow-sm  dark:bg-gray-600/30">
+                    <div className="h-full grid md:grid-cols-3 md:gap-4 m-auto w-5/6">
+                        <div className="md:col-span-1 grid justify-items-center m-auto">
+                            <h1 className="dark:text-dark font-bold text-lg">Javascript Essentials</h1>
+                        </div>
+                        <figure className="md:col-span-2 bg-white-300 w-full h-4/5 mb-auto md:m-auto grid justify-items-center">
                             <img src={js_cert} alt="Javascript Essentials" className="h-full w-full contain" />
                         </figure>
                     </div>
@@ -101,7 +131,7 @@ export const Home = () => {
                     
                 </div>
             </div>
-            <div className={`hidden md:grid grid-rows-5 sm:gap-2 h-full items-start `}>
+            <div className={`hidden md:col-span-1 md:grid grid-rows-5 sm:gap-2 h-full items-start `}>
                <div className=" w-full h-full row-span-3 shadow-lg dark:bg-gray-600/30 rounded-md">
                     <div className="shadow-md rounded-md overflow-hidden my-5 mx-auto w-4/5 h-10">
                         <input type="search" name="" id="searchbar" placeholder="Search..." className="outline-none px-3 w-full h-full"/>
