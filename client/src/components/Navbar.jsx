@@ -22,36 +22,41 @@ const Navbar = () => {
         document.documentElement.classList.toggle('dark', isThemeDark);
       }, [isThemeDark]);
 
+    const navigations = [
+        {
+            name:'Home',
+            path:'/',
+        },
+        {
+            name:'Portfolio',
+            path:'/portfolio',
+        },
+        {
+            name:'About',
+            path:'/about ',
+        },
+        {
+            name:'Contact',
+            path:'/contact',
+        }
+    ]
     
     
   return (
-    <div className={`h-20 dark:bg-black`}>
-        <div className="flex items-center justify-between md:w-11/12 w-96 m-auto h-full">
+    <div className={`h-20 dark:bg-black shadow-md`}>
+        <div className="flex items-center justify-between md:w-11/12 w-80 xl:w-98 m-auto h-full">
             <div className="">
-                <h1 className="font-bold dark:text-dark text-light text-2xl sm:text-4xl">SojDev</h1>
+                <h1 className="font-bold dark:text-dark text-light text-2xl sm:text-4xl xl:text-4xl">SojDev</h1>
             </div>
             <nav className={`fixed h-full w-full top-20 left-0 text-center sm:m-auto sm:w-0 sm:static duration-150 ${Menu ? `translate-x-full` : `translate-x-none`}`}>
-                <ul className="flex h-full flex-col items-center justify-center gap-5 bg-primary dark:bg-secondary sm:bg-transparent sm:flex sm:flex-row sm:gap-20 dark:text-dark text-light font-sans font-bold">
-                    <li>
-                        <Link>
-                            <span className="text-dark dark:text-light">Home</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <span className="text-dark dark:text-light">About</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <span className="text-dark dark:text-light">Portfolio</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link>
-                            <span className="text-dark dark:text-light">Contact</span>
-                        </Link>
-                    </li>
+                <ul className="flex h-full flex-col items-center justify-center gap-5 bg-primary dark:bg-secondary sm:bg-transparent sm:flex sm:flex-row sm:gap-20 font-sans font-bold text-dark md:text-light dark:text-dark">
+                    {
+                        navigations.map((index,key) => (
+                            <li key={key}>
+                                <Link to={index.path}>{index.name}</Link>
+                            </li>
+                        ))
+                    }
                 </ul>
             </nav>
             <div className="flex items-center gap-5 sm:block">
